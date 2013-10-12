@@ -20,6 +20,10 @@
         </Directory>
     </VirtualHost>
 
+Error detection page can now be found at http://symfony-of-grace.local/config.php
+Bottom of that page provides links to configuration and welcome pages.
+
+
 ## Run by
  
 http://symfony-of-grace.local/app_dev.php/battle/warrior
