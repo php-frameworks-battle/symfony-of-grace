@@ -22,7 +22,7 @@
 
 ## Run by
  
-http://symfony-of-grace.local/app_dev.php/battle/hey
+http://symfony-of-grace.local/app_dev.php/battle/warrior
 
 # README of Symfony Installation
 Welcome to the Symfony Standard Edition - a fully-functional Symfony2
