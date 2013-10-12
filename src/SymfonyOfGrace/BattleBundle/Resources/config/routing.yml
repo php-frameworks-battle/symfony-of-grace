@@ -1,0 +1,3 @@
+symfony_of_grace_battle_homepage:
+    pattern:  /battle/{name}
+    defaults: { _controller: SymfonyOfGraceBattleBundle:Default:index }

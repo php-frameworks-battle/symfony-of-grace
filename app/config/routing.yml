@@ -1,0 +1,4 @@
+symfony_of_grace_battle:
+    resource: "@SymfonyOfGraceBattleBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,7 @@
+parameters:
+#    symfony_of_grace_battle.example.class: SymfonyOfGrace\BattleBundle\Example
+
+services:
+#    symfony_of_grace_battle.example:
+#        class: %symfony_of_grace_battle.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
