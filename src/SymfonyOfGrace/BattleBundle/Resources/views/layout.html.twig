@@ -1,0 +1,70 @@
+
+{% block head %}
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <noscript>
+    <link rel="stylesheet" href="css/5grid/core.css" />
+    <link rel="stylesheet" href="css/5grid/core-desktop.css" />
+    <link rel="stylesheet" href="css/5grid/core-1200px.css" />
+    <link rel="stylesheet" href="css/5grid/core-noscript.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-desktop.css" />
+    </noscript>
+    <script src="css/5grid/jquery.js"></script>
+    <script src="css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+{% endblock %}
+
+
+{% block title 'Battle' %}
+
+
+{% block body %}
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="flash-message">
+            <em>Notice</em>: {{ flashMessage }}
+        </div>
+    {% endfor %}
+
+    {% block content_header %}
+        <div class="5grid-layout">
+            <div class="row">
+                <div class="12u" id="logo"> <!-- Logo -->
+                    <h1><a href="#" class="mobileUI-site-name">PHP Frameworks Battle</a></h1>
+                    <p>Battle in [project name goes here]</p>
+                </div>
+            </div>
+        </div>
+        <div id="menu-wrapper">
+            <div class="5grid-layout">
+                <div class="row">
+                    <div class="12u" id="menu">
+                        <nav class="mobileUI-site-nav">
+                            <ul>
+                                <li class="current_page_item"><a href="index.html">Homepage</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="clear: both"></div>
+    {% endblock %}
+
+    <div class="block">
+        {% block content %}{% endblock %}
+    </div>
+    <div id="copyright" class="5grid-layout">
+        <section>
+            <p>&copy; Your Site Name | Images: <a href="http://fotogrph.com/">Fotogrph</a> | Design: <a href="http://html5templates.com/">HTML5Templates.com</a></p>
+        </section>
+    </div>
+
+    {% if code is defined %}
+        <h2>Code behind this page</h2>
+        <div class="block">
+            <div class="symfony-content">{{ code|raw }}</div>
+        </div>
+    {% endif %}
+{% endblock %}
