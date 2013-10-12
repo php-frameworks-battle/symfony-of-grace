@@ -13,12 +13,18 @@
     <VirtualHost *:80>
       ServerName symfony-of-grace.local
       DocumentRoot /path-to-the-project?/web
-      <Directory />
+      DirectoryIndex app_dev.php
+      <Directory /path-to-the-project?/web>
           AllowOverride All
             Order allow,deny
             Allow from All
         </Directory>
     </VirtualHost>
+
+NOTE: We had to update web/.htaccess for friendly url
+    -    RewriteRule .? %{ENV:BASE}/app.php [L]
+    +    RewriteRule .? %{ENV:BASE}/app_dev.php [L]
+
 
 Error detection page can now be found at http://symfony-of-grace.local/config.php
 Bottom of that page provides links to configuration and welcome pages.
