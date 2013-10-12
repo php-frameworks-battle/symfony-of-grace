@@ -1,3 +1,6 @@
 symfony_of_grace_battle_homepage:
-    pattern:  /battle/{name}
+    pattern:  /
     defaults: { _controller: SymfonyOfGraceBattleBundle:Default:index }
+symfony_of_grace_battle_contactpage:
+    pattern:  /contact
+    defaults: { _controller: SymfonyOfGraceBattleBundle:Default:contact }
