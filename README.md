@@ -1,5 +1,7 @@
 # Symfony Of Grace
 
+Implementation of Battle in Symfony 2.3.6
+
 ## Setup
 
 1. Clone the repo
